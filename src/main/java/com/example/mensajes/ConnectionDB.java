@@ -1,10 +1,10 @@
-package com.example.mensajes_app;
+package com.example.mensajes;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class Conexion {
+public class ConnectionDB {
     public Connection get_conection(){
         Connection connection = null;
         try {
