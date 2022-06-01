@@ -10,9 +10,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class MessageDAO {
+    private static ConnectionDB db_connect = new ConnectionDB();
     public static  void createMessageDB(Message message){
-        ConnectionDB db_connect = new ConnectionDB();
-
         try(Connection connection = db_connect.get_conection()) {
             PreparedStatement ps = null;
             try{
@@ -31,7 +30,6 @@ public class MessageDAO {
     }
 
     public static ArrayList<Message> readMessagesDB(){
-        ConnectionDB db_connect = new ConnectionDB();
         PreparedStatement ps = null;
         ResultSet rs = null;
         ArrayList<Message> listMessages = new ArrayList<Message>();
@@ -59,8 +57,6 @@ public class MessageDAO {
     }
 
     public static void deleteMessageDB(int id_mensaje){
-        ConnectionDB db_connect = new ConnectionDB();
-
         try(Connection connection = db_connect.get_conection()) {
             PreparedStatement ps = null;
             try{
@@ -84,8 +80,6 @@ public class MessageDAO {
     }
 
     public static void updateMessageDB(Message message){
-        ConnectionDB db_connect = new ConnectionDB();
-
         try(Connection connection = db_connect.get_conection()) {
             PreparedStatement ps = null;
             try{
