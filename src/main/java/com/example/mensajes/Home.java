@@ -18,7 +18,7 @@ public class Home {
             System.out.println(" 1. crear mensaje");
             System.out.println(" 2. listar mensajes");
             System.out.println(" 3. editar mensaje");
-            System.out.println(" 3. eliminar mensaje");
+            System.out.println(" 4. eliminar mensaje");
             System.out.println(" 5. salir");
 
             // Leemos la opcion del usuario

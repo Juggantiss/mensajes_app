@@ -29,7 +29,11 @@ public class MessageService {
     }
 
     public static void deleteMessage(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Ingresa el id del mensaje a eliminar");
+        int id = sc.nextInt();
 
+        MessageDAO.deleteMessageDB(id);
     }
 
     public static void updateMessage(){
